@@ -1,13 +1,13 @@
 {
-  "main.css": "/BusApp2/static/css/main.6f42444b.chunk.css",
-  "main.js": "/BusApp2/static/js/main.42adf3c9.chunk.js",
-  "main.js.map": "/BusApp2/static/js/main.42adf3c9.chunk.js.map",
-  "runtime~main.js": "/BusApp2/static/js/runtime~main.35f762af.js",
-  "runtime~main.js.map": "/BusApp2/static/js/runtime~main.35f762af.js.map",
-  "static/js/2.9ca608e9.chunk.js": "/BusApp2/static/js/2.9ca608e9.chunk.js",
-  "static/js/2.9ca608e9.chunk.js.map": "/BusApp2/static/js/2.9ca608e9.chunk.js.map",
-  "index.html": "/BusApp2/index.html",
-  "precache-manifest.513d1345221f47c19c8e08c93787bc89.js": "/BusApp2/precache-manifest.513d1345221f47c19c8e08c93787bc89.js",
-  "service-worker.js": "/BusApp2/service-worker.js",
-  "static/css/main.6f42444b.chunk.css.map": "/BusApp2/static/css/main.6f42444b.chunk.css.map"
+  "main.css": "./static/css/main.6f42444b.chunk.css",
+  "main.js": "./static/js/main.27adf4b1.chunk.js",
+  "main.js.map": "./static/js/main.27adf4b1.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.9eb600ee.js",
+  "runtime~main.js.map": "./static/js/runtime~main.9eb600ee.js.map",
+  "static/js/2.ed785ab9.chunk.js": "./static/js/2.ed785ab9.chunk.js",
+  "static/js/2.ed785ab9.chunk.js.map": "./static/js/2.ed785ab9.chunk.js.map",
+  "index.html": "./index.html",
+  "precache-manifest.5a21ff2d93c007bc3beae81a8f86ac29.js": "./precache-manifest.5a21ff2d93c007bc3beae81a8f86ac29.js",
+  "service-worker.js": "./service-worker.js",
+  "static/css/main.6f42444b.chunk.css.map": "./static/css/main.6f42444b.chunk.css.map"
 }

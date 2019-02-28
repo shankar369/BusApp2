@@ -1,13 +1,13 @@
 {
-  "main.css": "./static/css/main.6f42444b.chunk.css",
-  "main.js": "./static/js/main.d12fc4f1.chunk.js",
-  "main.js.map": "./static/js/main.d12fc4f1.chunk.js.map",
-  "runtime~main.js": "./static/js/runtime~main.9eb600ee.js",
-  "runtime~main.js.map": "./static/js/runtime~main.9eb600ee.js.map",
-  "static/js/2.e3309c88.chunk.js": "./static/js/2.e3309c88.chunk.js",
-  "static/js/2.e3309c88.chunk.js.map": "./static/js/2.e3309c88.chunk.js.map",
-  "index.html": "./index.html",
-  "precache-manifest.2fe643a4fe2b52a92e2299958f3e5a41.js": "./precache-manifest.2fe643a4fe2b52a92e2299958f3e5a41.js",
-  "service-worker.js": "./service-worker.js",
-  "static/css/main.6f42444b.chunk.css.map": "./static/css/main.6f42444b.chunk.css.map"
+  "main.css": "/shankar369/BusApp2/static/css/main.6f42444b.chunk.css",
+  "main.js": "/shankar369/BusApp2/static/js/main.6902e9f2.chunk.js",
+  "main.js.map": "/shankar369/BusApp2/static/js/main.6902e9f2.chunk.js.map",
+  "runtime~main.js": "/shankar369/BusApp2/static/js/runtime~main.10ac75c9.js",
+  "runtime~main.js.map": "/shankar369/BusApp2/static/js/runtime~main.10ac75c9.js.map",
+  "static/js/2.658e08b6.chunk.js": "/shankar369/BusApp2/static/js/2.658e08b6.chunk.js",
+  "static/js/2.658e08b6.chunk.js.map": "/shankar369/BusApp2/static/js/2.658e08b6.chunk.js.map",
+  "index.html": "/shankar369/BusApp2/index.html",
+  "precache-manifest.2e40141a4179d59d36e8f498c9b65f2c.js": "/shankar369/BusApp2/precache-manifest.2e40141a4179d59d36e8f498c9b65f2c.js",
+  "service-worker.js": "/shankar369/BusApp2/service-worker.js",
+  "static/css/main.6f42444b.chunk.css.map": "/shankar369/BusApp2/static/css/main.6f42444b.chunk.css.map"
 }

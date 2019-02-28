@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/shankar369/BusApp2/precache-manifest.2e40141a4179d59d36e8f498c9b65f2c.js"
+  "/BusApp2/precache-manifest.d95c2ed3d3762e212eb816f7ccdbcb2d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/shankar369/BusApp2/index.html", {
+workbox.routing.registerNavigationRoute("/BusApp2/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

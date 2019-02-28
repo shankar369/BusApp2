@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BusApp2/precache-manifest.e3dea787ab83342a753c0875767dc643.js"
+  "/BusApp2/precache-manifest.513d1345221f47c19c8e08c93787bc89.js"
 );
 
 workbox.clientsClaim();

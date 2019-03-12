@@ -64,7 +64,7 @@ export class LogIn extends Component {
                                 <br></br>
                                 <div id="show-error"></div>
                                 <center>
-                                
+                                    <i className = "fas fa-user-circle mr-3 fa-lg" />
                                         <TextField
                                             hintText = "Enter Your Email"
                                             floatingLabelText = "Email"
@@ -72,6 +72,7 @@ export class LogIn extends Component {
 
                                         />
                                                 <br/>
+                                    <i className = "fas fa-key fa-lg mr-3"></i>
                                         <TextField
                                             type = "password"
                                             hintText = "Enter Your Password"

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter,Switch,Route } from 'react-router-dom';
+import {HashRouter,Switch,Route,Redirect } from 'react-router-dom';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Routes from './components/Routes';
@@ -47,7 +47,7 @@ class App extends Component {
   render() {
 
     return (
-      <BrowserRouter>
+      <HashRouter basename='/'>
         <div className="App">
           <Switch>
             <Route exact path = '/' render = {
@@ -63,11 +63,14 @@ class App extends Component {
               () => <h1>Page Not Found</h1>
             }/>
           </Switch>
+          {/* <Redirect to = '/'/> */}
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 
 }
+// ReactDOM.render(<App/>,document.getElementById('root'));
 
 export default App;
+

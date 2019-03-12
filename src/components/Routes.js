@@ -26,7 +26,12 @@ export class Routes extends Component {
         
 
         console.log("In constructor ",this.state);
-        
+
+        let dbDate = firebase.database().ref().child('date');
+        dbDate.on('value',snap =>{
+            console.log("snap date :",snap.val());
+            this.fdate = snap.val();    
+        })
 
     }
 
@@ -37,15 +42,39 @@ export class Routes extends Component {
         this.dbref.on('value', snap => {
             let shuttles = snap.val();
             this.setState(shuttles);
-            console.log("State",this.state);
-            console.log("Busses",snap.val());
+            // console.log("State",this.state);
+            // console.log("Busses",snap.val());
+            console.log("Firebase Date : ",this.fdate,"today : ",this.getToday(),'\n',this.state);
+            if(this.fdate !== this.getToday()){
+                if(Object.keys(this.state).length !== 0){
+                    console.log("calling reset ...");
+                    this.resetStops();
+                }
+            }
         });
     }
 
 
+    
+    resetStops = () => {
+        Object.keys(this.state).map(route =>{
+            Object.keys(this.state[route]).map(stop =>{
+                firebase.database().ref('Busses/' + route +'/'+stop).set('---');
+            })
+        })
+        firebase.database().ref('date').set(this.getToday());
+    }
 
 
+    getToday = () =>{
+        let date = new Date();
+        return date.getFullYear().toString()+'-'+date.getDate().toString()+'-'+date.getMonth().toString()
+    }
 
+    getCurrentTime = () =>{
+        let time = new Date();
+        return time.getHours().toString()+':'+time.getMinutes().toString()
+    }
 
 
     state = { 
@@ -107,6 +136,13 @@ export class Routes extends Component {
     }
 
 
+    // reset = () =>{
+    //     Object.keys(this.state).map( route =>{
+    //         Object.keys(this.state[route])=>{
+
+    //         }
+    //     }
+    // }
 
 
     // LogOutUser = (e) => {
@@ -202,11 +238,15 @@ export class Routes extends Component {
         ReactDOM.render(stopsList, document.getElementById('stops-list'+route));
         Object.keys(this.state[route]).map( stop =>{
             
-               if(this.state[route][stop] === 1){
+               if(this.state[route][stop] !== '---'){
    
                    document.getElementById(route+stop+"defaultCheck1").checked = true;
                    document.getElementById(route+stop).style.backgroundColor = "green";
                    
+               }
+               else{
+                document.getElementById(route+stop+"defaultCheck1").checked = false;
+                document.getElementById(route+stop).style.backgroundColor = "white";
                }
                           
            })
@@ -216,27 +256,33 @@ export class Routes extends Component {
 
 
 
-    makeCheked(route, stop) {
+    makeCheked = (route, stop) =>{
         if(document.getElementById(route+stop+"defaultCheck1").checked === true){
-            firebase.database().ref('Busses/' + route +'/'+stop).set(1);
+            firebase.database().ref('Busses/' + route +'/'+stop).set(this.getCurrentTime());
             document.getElementById(route+stop).style.backgroundColor = "green";
         }
         else{
-            firebase.database().ref('Busses/' + route +'/'+stop).set(0);
+            firebase.database().ref('Busses/' + route +'/'+stop).set('---');
             document.getElementById(route+stop).style.backgroundColor = "white";
         }
+    }
         
-        Object.keys(this.state[route]).map( stop => {
+    //     Object.keys(this.state[route]).map( stop => {
             
-               if(this.state[route][stop] === 1){
+    //            if(this.state[route][stop] === 1){
    
-                   document.getElementById(route+stop+"defaultCheck1").checked = true;
-                   document.getElementById(route+stop).style.backgroundColor = "green";
+    //                document.getElementById(route+stop+"defaultCheck1").checked = true;
+    //                document.getElementById(route+stop).style.backgroundColor = "green";
                    
-               }
+    //            }
+    //            else{
+    //             document.getElementById(route+stop+"defaultCheck1").checked = false;
+    //             document.getElementById(route+stop).style.backgroundColor = "white";
+    //            }
+               
                           
-           })
-      }
+    //        })
+    //   }
 
 
 

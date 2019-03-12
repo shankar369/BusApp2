@@ -83,13 +83,14 @@ export class SignUp extends Component {
                     <br></br>
                     <div id="show-error"></div>
                     <center>
-                       
+                    <i class="fas fa-user-circle mr-3 fa-lg" />
                             <TextField
                                 hintText = "Enter Your Email"
                                 floatingLabelText = "Email"
                                 onChange = {this.handleChange("userName")}
                             />
                                     <br/>
+                        <i class="fas fa-key fa-lg mr-3"></i>
                             <TextField
                                 hintText = "Enter Your Password"
                                 floatingLabelText = "Password"
@@ -99,6 +100,7 @@ export class SignUp extends Component {
 
                                
                                 <br/>
+                            <i class="fas fa-key fa-lg mr-3"></i>
                                 <TextField
                                 hintText = "Re-Enter Your Password"
                                 floatingLabelText = "Re-Enter Password"

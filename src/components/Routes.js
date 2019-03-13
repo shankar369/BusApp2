@@ -73,7 +73,13 @@ export class Routes extends Component {
 
     getCurrentTime = () =>{
         let time = new Date();
-        return time.getHours().toString()+':'+time.getMinutes().toString()
+        let hours = time.getHours()
+        if(hours < 10)
+            hours = '0'+hours.toString()
+        let minutes = time.getMinutes()
+        if(minutes < 10)
+            minutes = '0'+minutes.toString()
+        return hours.toString() + ':' + minutes.toString()
     }
 
 
@@ -158,6 +164,20 @@ export class Routes extends Component {
     //     e.preventDefault();
     //  }
 
+    changeIcon = (e) =>{
+        //console.log("Clicked arrow : ",e.target.className);
+        if(e.target.classList.contains("fa-angle-down")){
+            e.target.classList.remove("fa-angle-down")
+            e.target.classList.add("fa-angle-up")
+        }
+            
+        else{
+            e.target.classList.remove("fa-angle-up")
+            e.target.classList.add("fa-angle-down")
+        }
+            
+        e.preventDefault();
+    }
 
 
     componentDidUpdate = () =>{
@@ -175,9 +195,9 @@ export class Routes extends Component {
                        
                        
                         
-                            <span onClick = {()=>this.showStopsList(route)} className="badge badge-primary badge-pill pl-3 pr-3 pt-2 pb-2"  data-toggle="collapse" data-target={"#"+route} aria-expanded="false" aria-controls="collapseExample">
+                            <span onClick = {()=>this.showStopsList(route)} data-toggle="collapse" data-target={"#"+route} aria-expanded="false" aria-controls="collapseExample">
                             
-                            View Full Map
+                            <i onClick = {this.changeIcon} className = "fas fa-angle-down fa-lg"></i>
                             
                             </span>
                         
